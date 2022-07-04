@@ -7,7 +7,7 @@ module.exports = (mongoose) => {
       lastName: String,
       username: { type: String, required: true },
       password: { type: String, required: true },
-      role: { type: String, default: "user" } /*types: admin ,user*/,
+      role: { type: String, default: "user" },
       isLoggedIn: Boolean,
       token: String,
     })
