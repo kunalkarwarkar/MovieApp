@@ -1,4 +1,4 @@
-const dbConfig = require("./config/db.moviesdb.js");
+const dbConfig = require("../config/db.config.js");
 
 const mongoose = require("mongoose");
 

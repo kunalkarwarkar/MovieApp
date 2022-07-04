@@ -3,7 +3,7 @@ module.exports = (mongoose) => {
       "artist",
       mongoose.Schema(
         {
-          artistid: { type: integer, required: true },
+          artistid: { type: Number, required: true },
           firstName: { type: String, required: true },
           lastName: String,
           wiki_url: {
