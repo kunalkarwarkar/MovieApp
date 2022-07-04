@@ -3,7 +3,7 @@ module.exports = (app) => {
   
     var router = require("express").Router();
   
-    router.get("/artist", artist.findAllArtist);
+    router.get("/artist", artist.findAllArtists);
   
     app.use("/api", router);
   };

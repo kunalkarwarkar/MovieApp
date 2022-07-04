@@ -1,6 +1,6 @@
 module.exports = (mongoose) => {
   const Genre = mongoose.model(
-    "genre",
+    "genres",
     mongoose.Schema({
       genreid: { type: Number, required: true },
       genre: { type: String, required: true },

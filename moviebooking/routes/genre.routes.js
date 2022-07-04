@@ -1,10 +1,7 @@
 module.exports = (app) => {
-    const genre = require("../controllers/genre.controller.js");
+  const genre = require("../controllers/genre.controller.js");
+  var router = require("express").Router();
+  router.get("/genre", genre.findAllGenre);
 
-    var router = require("express").Router();
-
-    router.get("/genre", genre.findAllGenre);
-
-    app.use("/api", router);
-
-} 
+  app.use("/api", router);
+};

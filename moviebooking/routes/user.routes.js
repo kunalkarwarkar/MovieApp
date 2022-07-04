@@ -1,19 +1,19 @@
-const auth = require("../../middleware/auth"); 
+const auth = require("../middleware/auth");
 
-module.exports = app => {
+module.exports = (app) => {
   const users = require("../controllers/user.controller");
 
-    var router = require("express").Router();
+  var router = require("express").Router();
 
-    router.post("/login", users.login);
+  router.post("/login", users.login);
 
-    router.post("/sign-up", users.signUp);
+  router.post("/sign-up", users.signUp);
 
-    router.post("/logout", auth, users.logout);
+  router.post("/logout", auth, users.logout);
 
-    router.post("/getCouponCode ", auth, users.getCouponCode);
+  router.post("/getCouponCode ", auth, users.getCouponCode);
 
-    router.post("/bookShow ", auth, users.bookShow);
+  router.post("/bookShow ", auth, users.bookShow);
 
-    app.use('/api', router);
-  };
+  app.use("/api", router);
+};

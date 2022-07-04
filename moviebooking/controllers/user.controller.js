@@ -86,7 +86,7 @@ exports.login = (req, res) => {
               });
             } else {
               const token = jwt.sign({ _id: data._id }, "myprivatekey");
-              data.token = token;
+              data.accesstoken = token;
               res.send(data);
             }
           })
